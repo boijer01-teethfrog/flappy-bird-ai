@@ -21,4 +21,12 @@ public class BirdAgent : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpVelocity);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("pipe"))
+        {
+            Debug.Log("COLLIDED WITH PIPE D:"); //ändra det här att restarta å börja ny episod
+        }
+    }
 }

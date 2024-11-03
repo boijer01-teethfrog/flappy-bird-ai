@@ -30,6 +30,7 @@ public class PipeSpawner : MonoBehaviour
         
         float randomY = Random.Range(minY, maxY);
         newPipe.transform.position = new Vector3(transform.position.x, randomY, 0);
+        newPipe.tag = "pipe";
 
         newPipe.AddComponent<PipeMover>().pipeSpeed = pipeSpeed;
         newPipe.GetComponent<PipeMover>().despawnX = despawnX;
